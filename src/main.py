@@ -1,5 +1,5 @@
 import click
-from logic import area, area_zone
+from src.logic import area, area_zone
 
 
 @click.command()
