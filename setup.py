@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="timechecker",
-    version="0.0.4",
+    version="0.0.5",
     author="Edidiong Etuk",
     author_email="edeediong@gmail.com",
     url="https://bit.ly/edeediong-resume",
