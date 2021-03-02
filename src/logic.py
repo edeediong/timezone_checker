@@ -31,24 +31,22 @@ def area_zone(zone):
 
 def timezones(zone):
     """This function is used to handle situations of Daylight Saving Time that the standard library can't recognize."""
-    if zone == "PDT":
-        return "PST8PDT"
-    if zone == "MDT":
-        return "MST7MDT"
-    if zone == "EDT":
-        return "EST5EDT"
-    if zone == "CDT":
-        return "CST6CDT"
-    if zone == "WAT":
-        return "Etc/GMT+1"
-    if zone == "ACT":
-        return "Australia/ACT"
-    if zone == "AST":
-        return "Atlantic/Bermuda"
-    if zone == "CAT":
-        return "Africa/Johannesburg"
+    zones = {
+        "PDT": "PST8PDT",
+        "MDT": "MST7MDT",
+        "EDT": "EST5EDT",
+        "CDT": "CST6CDT",
+        "WAT": "Etc/GMT+1",
+        "ACT": "Australia/ACT",
+        "AST": "Atlantic/Bermuda",
+        "CAT": "Africa/Johannesburg",
+    }
 
-    return zone
+    try:
+        zones[zone]
+    except:
+        return zone
+    return zones[zone]
 
 
 def format_location(location):
